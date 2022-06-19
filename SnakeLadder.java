@@ -12,7 +12,7 @@ while(position != destination)
 
 diceRoll++;
 int randomCheck=(int) Math.floor(Math.random() * 10) % 6+1;
-int randomCheck1=(int) Math.floor(Math.random() * 10) % 3;
+int randomCheck1=(int) Math.floor(Math.random() * 10) % 4;
 int randomCheck2=(int) Math.floor(Math.random() * 10) % 20+3;
 
 System.out.println(randomCheck);
@@ -29,6 +29,11 @@ case 2:
 System.out.println("Snake");
 position -= randomCheck2;
 break;
+case 3:
+System.out.println("Normal");
+position += randomCheck;
+break;
+
 }
 if (position == 100) {
 break;
@@ -45,6 +50,7 @@ else {
 System.out.println("New Position: " + position);
 }
 }
-System.out.println("You won");
+System.out.println("Your winning position: " + position);
+System.out.println("Number of time dicerolled: " + diceRoll);
 }
 }
